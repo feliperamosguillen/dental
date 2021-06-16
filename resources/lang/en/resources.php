@@ -93,5 +93,61 @@ return [
         ],
         'index'  => 'Users',
         'show'   => 'Show user'
+    ],
+    'patient' => [
+        'create' => 'Create a Patient',
+        'edit'   => 'Edit a Patient',
+        'fields' => [
+            'content'     => 'Content',
+            'description' => 'Description',
+            'title'       => 'Title',
+            'name' => 'Name',
+            'lastname' => 'Lastname',
+            'ages' => 'Age',
+            'picture' => 'Picture',
+        ],
+        'index'  => 'Patients',
+        'show'   => 'Show a Patient'
+    ],
+    'doctor' => [
+        'create' => 'Create a Doctor',
+        'edit'   => 'Edit a Doctor',
+        'fields' => [
+          'content'     => 'Content',
+          'description' => 'Description',
+          'title'       => 'Title',
+          'name' => 'Name',
+          'speciality' => 'Speciality',
+          'picture' => 'Picture'
+        ],
+        'index'  => 'Doctors',
+        'show'   => 'Show a Doctor'
+    ],
+    'schedule' => [
+        'create' => 'Create a Schedule',
+        'edit'   => 'Edit a Schedule',
+        'fields' => [
+          'content'     => 'Content',
+          'description' => 'Description',
+          'title'       => 'Title',
+          'doctor' => 'Doctor',
+          'patient' => 'Patient',
+          'selected_datetime' => 'Date and time',
+          'selected_date' => 'Date',
+          'selected_hour' => 'Time',
+          'doctor_id' => 'Doctor',
+          'patient_id' => 'Patient',
+          'id' => 'ID',
+          'doctor' => [
+            'name' => 'Doctor Name'
+          ],
+          'patient' => [
+            'name' => 'Patient Name',
+            'lastname' => 'Patient Lastname',
+            'ages' => 'Age'
+          ]
+        ],
+        'index'  => 'Schedules',
+        'show'   => 'Show a Schedule'
     ]
 ];

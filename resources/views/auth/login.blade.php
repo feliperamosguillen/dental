@@ -5,10 +5,12 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
-                    <h3 class="title has-text-grey">{{ __('auth.login.submit') }}</h3>
+                    <h3 class="title has-text-grey">
+                        {{ __('auth.login.submit') }}
+                    </h3>
                     <div class="box">
                         <figure class="avatar">
-                            <img alt="Avatar" src="{{ config('settings.login_image') }}">
+                            <img alt="Avatar" src="/i/logo.png" style="width: 50%;">
                         </figure>
                         <form id="login" method="POST" action="{{ route('auth.login.post') }}">
                             @include('partials.admin.errors')

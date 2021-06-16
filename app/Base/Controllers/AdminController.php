@@ -186,7 +186,9 @@ abstract class AdminController extends Controller
         $subfolder = Str::plural(mb_strtolower($this->model));
         $path = Storage::disk('uploads')->putFile($subfolder, $file);
         $fullPath = Storage::disk('uploads')->getAdapter()->applyPathPrefix($path);
-        [$host, $uploadPath] = explode('/public/', $fullPath);
+
+        [$host, $uploadPath] = explode('/public/',  str_replace("\\", "/", $fullPath));
+        
         return $uploadPath;
     }
 

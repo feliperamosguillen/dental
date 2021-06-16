@@ -71,6 +71,9 @@ class RouteServiceProvider extends ServiceProvider
         Route::model('category', Category::class);
         Route::model('page', Page::class);
         Route::model('user', User::class);
+        Route::model('patient', \App\Models\Patient::class);
+        Route::model('doctor', \App\Models\Doctor::class);
+        Route::model('schedule', \App\Models\Schedule::class);
         /** GENERATOR_MODEL_BINDER **/
     }
 
@@ -90,6 +93,15 @@ class RouteServiceProvider extends ServiceProvider
         });
         Route::bind('pSlug', function ($slug) {
             return Page::with('parent')->where('slug', $slug)->firstOrFail();
+        });
+        Route::bind('patientSlug', function ($slug) {
+            return \App\Models\Patient::where('slug', $slug)->firstOrFail();
+        });
+        Route::bind('doctorSlug', function ($slug) {
+            return \App\Models\Doctor::where('slug', $slug)->firstOrFail();
+        });
+        Route::bind('scheduleSlug', function ($slug) {
+            return \App\Models\Schedule::where('slug', $slug)->firstOrFail();
         });
         /** GENERATOR_PARAMETER_BINDER **/
     }

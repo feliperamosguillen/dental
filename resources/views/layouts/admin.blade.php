@@ -17,5 +17,11 @@
 @if($currentUser = auth()->user())@include('partials.admin.breadcrumbs')@endif
 <script src="{{ asset(mix('dist/js/admin.js')) }}" type="text/javascript"></script>
 @hasSection('scripts')@yield('scripts')@endif
+
+<style>
+.is-info{
+    display: none;
+}
+</style>
 </body>
 </html>
