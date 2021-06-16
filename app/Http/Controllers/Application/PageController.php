@@ -15,11 +15,7 @@ class PageController extends Controller
      */
     public function getIndex()
     {
-        return view('app.articles', [
-            'title' => getTitle(),
-            'description' => getDescription(),
-            'articles' => Article::published()->paginate(4)
-        ]);
+        echo "";exit;
     }
 
     /**
